@@ -31,6 +31,12 @@ The [dataset](https://www.kaggle.com/shitalkat/amazonearphonesreviews) used to c
 </p>
 <br>
 
+## Packages Used
+
+>*tm*: Text mining package to build the document-term matrices (DTM)<br>
+>*ggplot2*: For data visualization tools<br>
+>*e1071*: For building prediction models
+
 ## Data Preprocessing
 
 I built a simple SVM model to test if the review text dataset was enough to predict if a given review text was good or bad. A use case for this would be sorting unlabeled reviews into the respective categories. It would also be useful for identifying negative criticisms within otherwise positive reviews (especially considering the reviews are on a 1-5 scale rather than a binary scale).
@@ -141,7 +147,9 @@ For every set of DTMs, I applied these preprocessing steps as well:
 |Bagging     |NO   |YES                        |-                    |-                   |
 |Bagging     |YES  |NO                         |-                    |-                   |
 |Bagging     |YES  |YES                        |-                    |-                   |
+
 </p>
+
 <p align="center">
     <b>Note</b>: Neither applying the TF-DF weighting scheme nor normalization by doc length changed the number of test/train samples
 </p>
